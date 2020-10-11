@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karin's book shop</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="init()">
+    <h1>Welcome to my Book shop</h1>
+    <div class="add-book-container">
+        <input type="text" class="new-book-name" placeholder="book name" required>
+        <input type="number" class="new-book-price" placeholder="book price" required>
+        <button onclick="onAddBook()">Add book</button>
+    </div>
+
+    <table>
+        <thead>
+            <th onclick="renderBooks('id')">Id</th>
+            <th onclick="renderBooks('name')">Title</th>
+            <th onclick="renderBooks('price')">Price</th>
+            <th colspan="3">Action</th>
+        </thead>
+        <tbody class="book-list">
+        </tbody>
+    </table>
+    <div class="paging">
+        <span class="pages"></span>
+    </div>
+    <div class="modal" hidden>
+        <button onclick="closeModal()">X</button>
+        <h3></h3>
+        <h5>Price is: <span></span></h5>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Architecto cupiditate ex, facere facilis non, iste explicabo quisquam ipsum dicta sapiente amet
+            incidunt. Recusandae quia voluptatem maiores magni? Sequi, explicabo fugiat?</p>
+        <button class="increase">+</button><span class="rate"></span><button class="decrease">-</button>
+    </div>
+
+    <script src="js/util-service.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="js/book-service.js"></script>
+    <script src="js/book-controller.js"></script>
+</body>
+
+</html>
